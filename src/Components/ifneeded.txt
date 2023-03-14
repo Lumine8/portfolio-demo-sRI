@@ -1,0 +1,32 @@
+
+        <div style={{paddingBottom:'1rem',paddingTop:'1rem'}}>
+        <hr id="three" data-symbol="BREAK"/>
+        </div>
+
+        <Aboutme id={'About'}/>
+
+        <div style={{paddingBottom:'1rem',paddingTop:'1rem'}}>
+        <hr id="three" data-symbol="BREAK"/>
+        </div>
+        
+        <Projects id={'Projects'}/>
+        
+        <div style={{paddingBottom:'1rem',paddingTop:'1rem'}}>
+        <hr id="three" data-symbol="BREAK"/>
+        </div>
+
+        <Contact/>
+--------------------------------------------
+
+        <li>
+              <HashLink to="/#Home">Home</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#About">About</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#Projects">Projects</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#Contact">Contact</HashLink>
+        </li>

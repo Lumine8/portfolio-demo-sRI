@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color:#0B0C10;
+  --secondary-color:#202833;
+  --ternary-color:#C4C6C8;
+  --highlight-color:#66FCF1;
+  --border-color:#45A29F;
+  --dark-highlight:#15dfd1df;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-color);
+}
+
+.Navcontainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 60px;
+  background-color: var(--secondary-color);
+  position: fixed;
+  width:100%;
+  z-index: 9;
+}
+
+.logo {
+  color: var(--highlight-color);
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ternary-color);
+  text-decoration: none;
+}
+
+.nav-elements ul li a:hover {
+  color: var(--highlight-color);
+  position: relative;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: var(--secondary-color);
+}
+
+.nav-elements ul li a:visited {
+  color: var(--dark-highlight);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+  /* or to blue */
+    filter: invert(85%) sepia(99%) saturate(625%) hue-rotate(149deg) brightness(90%) contrast(97%);
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    z-index: 8;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: var(--secondary-color);
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
